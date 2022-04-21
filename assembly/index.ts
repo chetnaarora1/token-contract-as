@@ -6,7 +6,7 @@ import { context, storage, logging, PersistentMap } from "near-sdk-as";
 const balances = new PersistentMap<string, u64>("b:");
 const approves = new PersistentMap<string, u64>("a:");
 
-const TOTAL_SUPPLY: u64 = 1000000;
+const TOTAL_SUPPLY: u64 = 1000000000;
 export function init(initialOwner: string): void {
   logging.log("initialOwner: " + initialOwner);
   assert(storage.get<string>("init") == null, "Already initialized token supply");
